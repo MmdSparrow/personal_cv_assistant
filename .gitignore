@@ -1,0 +1,8 @@
+.env
+.venv
+.vscode
+database/
+resources/
+
+main.py
+note.txt
