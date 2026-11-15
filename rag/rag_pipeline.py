@@ -9,34 +9,34 @@ from configs.configs import (
     TEMPERATURE,
 )
 from constants.base_directories_names_constants import (
-    CHROMA_DATABASE_DIRECTORY,
     JSON_RESOURCES_DIRECTORY,
     PDF_RESOURCES_DIRECTORY,
+    QDRANT_DATABASE_DIRECTORY,
     TEXT_RESOURCES_DIRECTORY,
 )
 from embeddings import EmbeddingModel
 from indexing.document_indexer import DocumentIndexer
 from ingestion import JSONIngester, PDFIngester, TextIngester
 from llm.gemini_client import GeminiClient
-from vector_store import ChromaStore
+from vector_store import QdrantStore
 
 
 class RAGPipeline:
     def __init__(
         self,
         embedding_model_name=EMBEDDING_MODEL_NAME,
-        database_directory=CHROMA_DATABASE_DIRECTORY,
+        database_directory=QDRANT_DATABASE_DIRECTORY,
         collection_name=COLLECTION_NAME,
         best_results_top_k=BEST_RESULTS_TOP_K,
         temperature=TEMPERATURE,
         max_output_tokens=MAX_OUTPUT_TOKENS,
     ):
         self.embedding_model = EmbeddingModel(embedding_model_name)
-        self.vector_store = ChromaStore(database_directory, collection_name)
+        self.vector_store = QdrantStore(database_directory, collection_name)
         self.best_results_top_k = best_results_top_k
         self.gemini_client = GeminiClient(temperature, max_output_tokens)
 
-    def create_vector_db(
+    def generate_vectors(
         self,
         batch_size=BATCH_SIZE,
         chunk_size=CHUNK_SIZE,

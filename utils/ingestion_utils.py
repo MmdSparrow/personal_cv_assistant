@@ -1,6 +1,6 @@
 import json
 
-import fitz
+import pymupdf
 
 
 def load_text(txt_file_path):
@@ -10,7 +10,7 @@ def load_text(txt_file_path):
 
 def load_pdf(pdf_file_path):
     pages = []
-    with fitz.open(pdf_file_path) as pdf:
+    with pymupdf.open(pdf_file_path) as pdf:
         for page in pdf:
             text = page.get_text("text").strip()
             if text:
