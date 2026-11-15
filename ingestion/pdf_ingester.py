@@ -1,4 +1,9 @@
-import fitz
+from constants.common_constatnts_names import (
+    CHUNK_INDEX_KEY_NAME,
+    SOURCE_KEY_NAME,
+    TEXT_KEY_NAME,
+)
+from utils.ingestion_utils import load_pdf
 
 from ._document_ingester_parent import DocumentIngesterParent
 
@@ -12,31 +17,18 @@ class PDFIngester(DocumentIngesterParent):
     ):
         super().__init__(pdfs_directory, chunk_size, chunk_overlap)
 
-    @staticmethod
-    def _load(pdf_file_path):
-        pages = []
-        with fitz.open(pdf_file_path) as pdf:
-            for page_number, page in enumerate(pdf):
-                text = page.get_text("text").strip()
-                if text:
-                    pages.append(
-                        {"text": text, "page": page_number + 1, "source": str(pdf_file_path)}
-                    )
-        return pages
-
     def process_files(self):
         documents = []
-        for pdf_path in sorted(self._documents_directory.rglob("*.pdf")):
-            pages = self._load(pdf_path)
-            for page in pages:
-                chunks = self.text_splitter.split_text(page["text"])
+        for pdf_file_path in sorted(self._documents_directory.rglob("*.pdf")):
+            pages = load_pdf(pdf_file_path)
+            for text in pages:
+                chunks = self._text_splitter.split_text(text)
                 for chunk_index, chunk in enumerate(chunks):
                     documents.append(
                         {
-                            "text": chunk,
-                            "source": page["source"],
-                            "page": page["page"],
-                            "chunk_index": chunk_index,
+                            TEXT_KEY_NAME: chunk,
+                            SOURCE_KEY_NAME: str(pdf_file_path),
+                            CHUNK_INDEX_KEY_NAME: chunk_index,
                         }
                     )
         return documents

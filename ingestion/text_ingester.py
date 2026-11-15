@@ -1,3 +1,10 @@
+from constants.common_constatnts_names import (
+    CHUNK_INDEX_KEY_NAME,
+    SOURCE_KEY_NAME,
+    TEXT_KEY_NAME,
+)
+from utils.ingestion_utils import load_text
+
 from ._document_ingester_parent import DocumentIngesterParent
 
 
@@ -9,22 +16,17 @@ class TextIngester(DocumentIngesterParent):
             chunk_overlap,
         )
 
-    @staticmethod
-    def _load(txt_file_path):
-        with open(txt_file_path, "r", encoding="utf-8") as file_to_read:
-            return file_to_read.read()
-
     def process_files(self):
         documents = []
         for txt_file_path in sorted(self._documents_directory.rglob("*.pdf")):
-            text = self._load(txt_file_path)
-            chunks = self.text_splitter.split_text(text)
+            text = load_text(txt_file_path)
+            chunks = self._text_splitter.split_text(text)
             for chunk_index, chunk in enumerate(chunks):
                 documents.append(
                     {
-                        "text": chunk,
-                        "source": str(txt_file_path),
-                        "chunk_index": chunk_index,
+                        TEXT_KEY_NAME: chunk,
+                        SOURCE_KEY_NAME: str(txt_file_path),
+                        CHUNK_INDEX_KEY_NAME: chunk_index,
                     }
                 )
         return documents
