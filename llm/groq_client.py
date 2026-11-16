@@ -3,10 +3,11 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from ._llm_client_parent import LLMClientParent
 from ._prompt import SYSTEM_INSTRUCTION, prompt_generator
 
 
-class GroqClient:
+class GroqClient(LLMClientParent):
     def __init__(
         self,
         temperature,
