@@ -63,19 +63,15 @@ class RAGPipeline:
             chunk_overlap=chunk_overlap,
         )
         documents = []
-        print("ingesters object created")
         documents.extend(json_ingester.process_files())
         documents.extend(pdf_ingester.process_files())
         documents.extend(text_ingester.process_files())
-        print("documents process completed")
 
         document_indexer = DocumentIndexer(
             batch_size=batch_size,
             embeddings_model=self.embedding_model,
             vector_store=self.vector_store,
         )
-        print("documents indexed")
-
         document_indexer.index_documents(documents)
 
     def ask(self, question):
@@ -83,7 +79,5 @@ class RAGPipeline:
         retrieved_documents = self.vector_store.search(
             query_embeddings, self.best_results_top_k
         )
-        print("searching done")
         answer = self.llm_client.generate_answer(question, retrieved_documents)
-        print("answered by gemini")
         return {"question": question, "answer": answer}

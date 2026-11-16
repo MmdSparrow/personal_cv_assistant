@@ -21,9 +21,7 @@ class DocumentIndexer:
 
     def index_documents(self, documents):
         if not documents:
-            print("No documents found.")
             return
-        print("start indexing...")
         for start in range(0, len(documents), self.batch_size):
             batch = documents[start : start + self.batch_size]
             texts = [document[TEXT_KEY_NAME] for document in batch]
@@ -48,4 +46,3 @@ class DocumentIndexer:
             self.vector_store.add(
                 ids=ids, documents=texts, embeddings=embeddings, metadatas=metadatas
             )
-        print(f"Indexed {len(documents)} chunks.")
