@@ -11,11 +11,11 @@ from ._document_ingester_parent import DocumentIngesterParent
 class PDFIngester(DocumentIngesterParent):
     def __init__(
         self,
-        pdfs_directory,
+        pdfs_documents_directory,
         chunk_size,
         chunk_overlap,
     ):
-        super().__init__(pdfs_directory, chunk_size, chunk_overlap)
+        super().__init__(pdfs_documents_directory, chunk_size, chunk_overlap)
 
     def process_files(self):
         documents = []

@@ -9,9 +9,9 @@ from ._document_ingester_parent import DocumentIngesterParent
 
 
 class JSONIngester(DocumentIngesterParent):
-    def __init__(self, documents_directory, chunk_size, chunk_overlap):
+    def __init__(self, jsons_documents_directory, chunk_size, chunk_overlap):
         super().__init__(
-            documents_directory,
+            jsons_documents_directory,
             chunk_size,
             chunk_overlap,
         )

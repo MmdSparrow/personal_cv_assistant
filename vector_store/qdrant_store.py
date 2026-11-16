@@ -8,14 +8,16 @@ from qdrant_client.models import (
     VectorParams,
 )
 
+from constants.base_directories_names_constants import QDRANT_DATABASE_DIRECTORY
+
 
 class QdrantStore:
     def __init__(
         self,
-        database_directory,
         collection_name,
     ):
-        self.client = QdrantClient(path=database_directory)
+        QDRANT_DATABASE_DIRECTORY.mkdir(parents=True, exist_ok=True)
+        self.client = QdrantClient(path=QDRANT_DATABASE_DIRECTORY)
         self.collection_name = collection_name
 
     @staticmethod

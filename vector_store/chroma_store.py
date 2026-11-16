@@ -1,13 +1,15 @@
 # import chromadb
 
+# from constants.base_directories_names_constants import CHROMA_DATABASE_DIRECTORY
+
 
 # class ChromaStore:
 #     def __init__(
 #         self,
-#         database_directory,
 #         collection_name,
 #     ):
-#         self.client = chromadb.PersistentClient(path=database_directory)
+#         CHROMA_DATABASE_DIRECTORY.mkdir(parents=True, exist_ok=True)
+#         self.client = chromadb.PersistentClient(path=CHROMA_DATABASE_DIRECTORY)
 #         self.collection = self.client.get_or_create_collection(
 #             name=collection_name, metadata={"hnsw:space": "cosine"}
 #         )
@@ -42,4 +44,3 @@
 
 #     def delete(self, ids):
 #         self.collection.delete(ids=ids)
-
