@@ -1,0 +1,36 @@
+# Professional Skills
+
+## Soft Skills
+- Discipline and self-management
+- Time management and task prioritization
+- Teamwork and collaboration
+- Effective communication
+- Analytical thinking and problem-solving
+- Research-oriented mindset and continuous learning
+
+## Technical Skills
+
+### Programming Languages
+- Python
+- Java (Spring Framework, Spring Boot)
+- C and C++
+
+### Data Analysis and Visualization
+- Power BI
+- NumPy
+- Pandas
+- SciPy
+- Seaborn
+- Statsmodels
+
+### Machine Learning and Deep Learning
+- Scikit-learn
+- PyTorch
+- TensorFlow
+- Keras
+
+### Computer Vision and Image Processing
+- OpenCV
+
+### Development Tools and Version Control
+- Git (proficient in version control, branching, merging, and collaborative workflows)

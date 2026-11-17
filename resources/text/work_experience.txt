@@ -1,0 +1,62 @@
+WORK EXPERIENCE
+
+1.  Back-end Developer | Fanap Soft June 2021 – January 2022
+
+    Contributed to the development of a digital school management system
+    supporting online and offline courses, student data management, and
+    role-based access control.
+
+    Key responsibilities and contributions:
+
+    -   Designed and developed RESTful API services for student
+        registration and pre-registration.
+    -   Implemented unit and integration tests using JUnit and Mockito.
+    -   Applied JSON Web Tokens (JWT) and web security mechanisms for
+        session management and role-based authentication.
+
+    Technologies:
+
+    -   Java 11
+    -   Spring Framework 3
+    -   Docker
+    -   Oracle Database
+
+2.  Back-end Developer | Tosan February 2023 – September 2023
+
+    Worked as a backend software engineer at Tosan, a provider of
+    banking, payment, and e-government solutions, within the SMS Banking
+    and Instant Payment teams.
+
+    Key responsibilities and contributions:
+
+    -   Designed and implemented containerized and integration testing
+        frameworks.
+    -   Developed RESTful API services for mobile application
+        notifications.
+    -   Ensured data validation and consistency in instant payment
+        transactions.
+
+    Technologies:
+
+    -   Java 17
+    -   Spring Framework 5
+    -   Spring Boot 3
+    -   Apache ZooKeeper
+    -   Apache Kafka
+    -   ActiveMQ
+    -   Docker
+    -   Kubernetes
+
+
+TEACHING EXPERIENCE
+
+1.  Teaching | Isfahan Mathematics House 
+    Number theory course, python course
+
+2.  Teaching Assistant | Amirkabir University of Technology
+
+    Served as a teaching assistant for undergraduate courses, supporting
+    students and course activities.
+
+    Courses: - Computational Intelligence (5 semesters) - Algorithm Design
+    (3 semesters) - Data Structures (3 semesters) - Operating Systems

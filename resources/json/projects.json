@@ -2,7 +2,6 @@
     {
         "id": "brain_tumor_segmentation_system",
         "name": "Brain Tumor Segmentation System",
-        "category": "Research",
         "domain": "Computer Vision",
         "technologies": [
             "Python",
@@ -11,18 +10,126 @@
             "Angular"
         ],
         "dataset": "BraTS 2020",
+        "repository": null,
+        "description": null
+    },
+    {
+        "id": "anomaly_detection",
+        "name": "Anomaly Detection Algorithms",
+        "domain": "Computer Vision",
+        "technologies": [
+            "Python",
+            "PyTorch"
+        ],
+        "dataset": "MVTec AD",
+        "repository": "https://github.com/MmdSparrow/anomaly_detection",
+        "description": "A unified PyTorch framework for implementing, training, and evaluating multiple visual anomaly detection algorithms using a consistent dataset and evaluation pipeline. The project implements and compares five approaches: Image Reconstruction, Feature Reconstruction, Memory Distance, PatchCore, and Student-Teacher Feature Pyramid Matching (STFPM). It focuses on detecting and localizing anomalous regions in industrial images using normal samples for training. Experimental results demonstrate the effectiveness of feature-based approaches, with PatchCore and Feature Reconstruction achieving the highest overall accuracy of 95.7%."
+    },
+    {
+        "id": "constrained_vehicle_routing_solver",
+        "name": "Constrained Vehicle Routing Problem Solver",
+        "domain": "Evolutionary Computation & Operations Research",
+        "technologies": [
+            "Python",
+            "PyEvolution",
+            "OSMnx",
+            "OpenStreetMap",
+            "Folium",
+            "Pandas"
+        ],
+        "dataset": "Automatically Generated Geospatial Dataset (OpenStreetMap)",
+        "repository": "https://github.com/MmdSparrow/Capacitated_Multi-Depot_Vehicle_Routing",
+        "description": "A Python-based optimization framework for solving constrained Vehicle Routing Problems (VRP) and Traveling Salesman Problems (TSP) using evolutionary algorithms. The system generates realistic geospatial datasets from OpenStreetMap city boundaries and optimizes delivery routes involving multiple depots, customer demands, vehicle capacity constraints, and maximum vehicle trip limits. It integrates PyEvolution, a custom evolutionary computation library, as its optimization engine and provides interactive route visualization using Folium. The objective is to minimize total transportation distance while satisfying all operational constraints."
+    },
+    {
+        "id": "face_recognition_system",
+        "name": "Deep Learning Face Recognition System",
+        "domain": "Computer Vision",
+        "technologies": [
+            "Python",
+            "PyTorch"
+        ],
         "architectures": [
-            "U-Net",
-            "TransU-Net",
-            "TransAtt-U-Net",
-            "FCT",
-            "DUCK-Net"
+            "MTCNN",
+            "FaceNet"
         ],
-        "methods": [
-            "Bayesian Neural Networks",
-            "Uncertainty Estimation",
-            "Monte Carlo Inference"
+        "dataset": null,
+        "repository": "https://github.com/MmdSparrow/face_recognition_system",
+        "description": "A deep learning-based face recognition pipeline integrating Multi-task Cascaded Convolutional Networks (MTCNN) for face detection and alignment with FaceNet for facial feature extraction. The system detects multiple faces, identifies facial landmarks, aligns detected faces, and generates 128-dimensional feature embeddings. Face recognition and verification are performed by comparing embedding distances in feature space, enabling facial similarity measurement and identity matching."
+    },
+    {
+        "id": "virtual_painter",
+        "name": "Real-Time Virtual Painter",
+        "domain": "Computer Vision & Human-Computer Interaction",
+        "technologies": [
+            "Python",
+            "OpenCV",
+            "MediaPipe",
+            "NumPy"
         ],
-        "repository": null
+        "dataset": null,
+        "repository": "https://github.com/MmdSparrow/virtual_painter",
+        "description": "A real-time virtual drawing application that enables users to paint on a digital canvas using hand gestures without requiring a physical input device. The system uses MediaPipe Hands to detect and track 21 hand landmarks from webcam streams, recognizing predefined gestures for drawing, color selection, and switching between brush and eraser modes. OpenCV handles real-time image processing, canvas rendering, frame compositing, and video recording, while NumPy provides efficient image and array manipulation. The application combines hand tracking and gesture recognition to create an intuitive, touch-free drawing experience."
+    },
+    {
+        "id": "ai_workout_trainer",
+        "name": "AI Workout Trainer",
+        "domain": "Computer Vision & Human Pose Estimation",
+        "technologies": [
+            "Python",
+            "OpenCV",
+            "MediaPipe Pose",
+            "NumPy"
+        ],
+        "dataset": null,
+        "repository": "https://github.com/MmdSparrow/AI_workout_trainer",
+        "description": "An AI-powered workout assistant that uses real-time human pose estimation and motion analysis to recognize exercise movements and track workout repetitions. The system leverages MediaPipe Pose to detect and track 33 body landmarks from webcam streams or video files, while OpenCV handles video processing and visualization. Its current implementation supports automatic biceps curl detection and repetition counting by analyzing body joint positions and movement patterns. The long-term objective is to develop a lightweight AI personal trainer with multi-exercise support, posture assessment, exercise error detection, and real-time corrective feedback."
+    },
+    {
+        "id": "mytorch",
+        "name": "MyTorch - Lightweight Deep Learning Library",
+        "domain": "Deep Learning & Neural Network Frameworks",
+        "technologies": [
+            "Python",
+            "NumPy",
+            "Object-Oriented Programming",
+            "Automatic Differentiation",
+            "Backpropagation"
+        ],
+        "dataset": null,
+        "repository": "https://github.com/MmdSparrow/Mytorch-library",
+        "description": "An educational deep-learning library developed from scratch as part of the Computational Intelligence course at Amirkabir University of Technology. Inspired by PyTorch, MyTorch provides a lightweight implementation of fundamental neural network components, including a NumPy-backed Tensor class, an automatic differentiation engine, and a computational graph for gradient calculation through backpropagation. The library supports common neural network layers, activation functions, loss functions such as MSE and CrossEntropy, and optimization algorithms including SGD and Adam. It provides a minimal model training workflow designed to demonstrate the internal mechanisms of deep learning frameworks and enable small-scale neural network experimentation."
+    },
+    {
+        "id": "mytorch",
+        "name": "MyTorch - Lightweight Deep Learning Library",
+        "domain": "Deep Learning & Neural Network Frameworks",
+        "technologies": [
+            "Python",
+            "NumPy",
+            "Object-Oriented Programming",
+            "Automatic Differentiation",
+            "Backpropagation"
+        ],
+        "dataset": null,
+        "repository": "https://github.com/MmdSparrow/Mytorch-library",
+        "description": "An educational deep-learning library developed from scratch as part of the Computational Intelligence course at Amirkabir University of Technology. Inspired by PyTorch, MyTorch provides a lightweight implementation of fundamental neural network components, including a NumPy-backed Tensor class, an automatic differentiation engine, and a computational graph for gradient calculation through backpropagation. The library supports common neural network layers, activation functions, loss functions such as MSE and CrossEntropy, and optimization algorithms including SGD and Adam. It provides a minimal model training workflow designed to demonstrate the internal mechanisms of deep learning frameworks and enable small-scale neural network experimentation."
+    },
+    {
+        "id": "persian_news_search_engine",
+        "name": "Persian News Search Engine",
+        "domain": "Information Retrieval & Natural Language Processing",
+        "technologies": [
+            "Python",
+            "TF-IDF",
+            "Jaccard Similarity",
+            "Cosine Similarity",
+            "Champion Lists",
+            "Text Normalization",
+            "Lemmatization"
+        ],
+        "dataset": "Persian News Corpus",
+        "repository": "https://github.com/MmdSparrow/News-Search-Engine",
+        "description": "A Persian-language news search engine developed as the final project for the Information Retrieval course at Amirkabir University of Technology. The system implements multiple retrieval strategies, including positional Boolean search with AND and NOT operators, phrase queries, TF-IDF-based document ranking using Jaccard and Cosine similarity, and champion lists for accelerating ranked retrieval. It incorporates Persian-specific text preprocessing techniques, including normalization, lemmatization, stop-word removal, punctuation elimination, and handling of character variations and colloquial spelling. The project explores efficient document indexing, query processing, and relevance-based ranking for Persian text retrieval."
     }
 ]

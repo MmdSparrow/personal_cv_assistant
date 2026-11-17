@@ -1,8 +1,11 @@
 {
     "full_name": "Sayed Mohammad Ali Mirkazemi",
     "professional_title": "AI Specialist & Data Scientist",
-    "email": "esmirk.137@gmail.com",
-    "student_email": "smohammad317@aut.ac.ir",
+    "contact me":{
+        "email": "esmirk.137@gmail.com",
+        "student_email": "smohammad317@aut.ac.ir",
+        "phone_number": "09010285337"
+    },
     "website": "https://mmdsparrow.github.io",
     "github": "https://github.com/MmdSparrow",
     "career_interests": [
