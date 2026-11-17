@@ -1,0 +1,28 @@
+[
+    {
+        "id": "brain_tumor_segmentation_system",
+        "name": "Brain Tumor Segmentation System",
+        "category": "Research",
+        "domain": "Computer Vision",
+        "technologies": [
+            "Python",
+            "PyTorch",
+            "FastAPI",
+            "Angular"
+        ],
+        "dataset": "BraTS 2020",
+        "architectures": [
+            "U-Net",
+            "TransU-Net",
+            "TransAtt-U-Net",
+            "FCT",
+            "DUCK-Net"
+        ],
+        "methods": [
+            "Bayesian Neural Networks",
+            "Uncertainty Estimation",
+            "Monte Carlo Inference"
+        ],
+        "repository": null
+    }
+]
